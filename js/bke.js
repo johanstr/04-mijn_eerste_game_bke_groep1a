@@ -24,7 +24,7 @@ let score_player1 = 0;          // Hier houden we de score van speler 1 bij
 let score_player2 = 0;          // Hier houden we de score van speler 2 bij
 let current_round = 0;          // Welke ronde is het
 let timer_id;                   // ID van de interval, dit is de klok van een ronde
-let elapsedTimeInSeconds;       // Verlopen ronde tijd in seconden
+let elapsed_time_in_seconds;    // Verlopen ronde tijd in seconden
 
 // CONSTANTEN
 const _PLAYER1 = 1;             // Beter leesbaar in onze code dan het getal 1, is ook Index in _IMAGES
@@ -102,6 +102,8 @@ function buttonClick(event_element) {
                                                                // om het te tonen aan de spelers
       
       // Willekeurig bepalen welke speler mag beginnen, dit levert een 1(speler 1) of een 2(speler 2) op
+      // TODO: We willen tijdens de refactoring fase de moeilijk leesbare getallen 2 en 1 hieronder vervangen door
+      // een constante, zodat duidelijk wordt waar deze twee getallen voor staan.
       current_player = Math.floor(Math.random() * (2 - 1 + 1) + 1);  
       
       // Nu gaan we tonen op het scherm welke speler de ronde mag beginnen
@@ -127,7 +129,7 @@ function buttonClick(event_element) {
       if(timer_id != null) {          // Als de variabele timer_id niet NULL is is er al een timer
          clearInterval(timer_id);    // Stop de timer
          timer_id = null;            // Reset de variabele op NULL
-         elapsedTimeInSeconds = 0;   // Reset de variabele op 0 seconden
+         elapsed_time_in_seconds = 0;   // Reset de variabele op 0 seconden
       }
       
       timer_id = setInterval( roundsTimer, 1000 );    // Om de seconde mag de functie roundsTimer uitgevoerd worden
@@ -155,7 +157,7 @@ function buttonClick(event_element) {
       if(timer_id != null) {          // Als de variabele timer_id niet NULL is is er al een timer
          clearInterval(timer_id);    // Stop de timer
          timer_id = null;            // Reset de variabele op NULL
-         elapsedTimeInSeconds = 0;   // Reset de variabele op 0 seconden
+         elapsed_time_in_seconds = 0;   // Reset de variabele op 0 seconden
       }
    }
 }
