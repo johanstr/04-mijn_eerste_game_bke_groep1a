@@ -21,6 +21,9 @@ Tik in een terminal venster (b.v. CMD) de volgende opdracht in:
    git clone https://github.com/johanstr/04-mijn_eerste_game_bke_groep1a .
 ```  
   
+### Volgen ontwikkeling van de code  
+Alle code van lessen staat gewoon in de master branch. Maar de code die ontstaat na refactoring kun je vinden in de branch **refactor**.  
+  
 ### Opnieuw downloaden van de laatste versie van de code
 Ga in de map (b.v. 04-bke) staan en tik de volgende terminal opdracht in:  
   
